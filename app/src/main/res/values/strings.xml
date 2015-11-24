@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Varsity Mobile</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_appetizer">AppetizerActivity</string>
+    <string name="title_activity_meal">MealActivity</string>
+    <string name="title_activity_dessert">DessertActivity</string>
+    <string name="title_activity_wings">WingsActivity</string>
+    <string name="title_activity_wing">WingActivity</string>
+    <string name="title_activity_mstick">MStickActivity</string>
+    <string name="title_activity_popcorn_shrimp">PopcornShrimpActivity</string>
+    <string name="title_activity_display_item">displayItemActivity</string>
+</resources>
