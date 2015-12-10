@@ -4,6 +4,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#6e142f"
     tools:context="edu.elon.cs.varsitymobile.MealActivity">
 
 
@@ -11,9 +12,9 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
+        android:text="All-American Burger"
         android:onClick="goToDisplayItem"
-        android:id="@+id/button"
+        android:id="@+id/aaBurger"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true" />
@@ -22,9 +23,10 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button2"
-        android:layout_below="@+id/button"
+        android:text="El Diablo Burger"
+        android:onClick="goToDisplayItem"
+        android:id="@+id/edBurger"
+        android:layout_below="@+id/aaBurger"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true" />
 
@@ -32,10 +34,123 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button3"
-        android:layout_below="@+id/button2"
+        android:text="Big Beefy Burger"
+        android:onClick="goToDisplayItem"
+        android:id="@+id/bbBurger"
+        android:layout_below="@+id/edBurger"
         android:layout_centerHorizontal="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Turkey Burger"
+        android:onClick="goToDisplayItem"
+        android:id="@+id/tBurger"
+        android:layout_below="@+id/bbBurger"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Garden Burger"
+        android:onClick="goToDisplayItem"
+        android:id="@+id/gBurger"
+        android:layout_below="@+id/tBurger"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chicken Caesar Wrap"
+        android:onClick="goToDisplayItem"
+        android:id="@+id/ccWrap"
+        android:layout_below="@+id/gBurger"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buffalo Bleu Wrap"
+        android:onClick="goToDisplayItem"
+        android:id="@+id/bbWrap"
+        android:layout_below="@+id/ccWrap"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Grilled Cheese"
+        android:onClick="goToDisplayItem"
+        android:id="@+id/gCheese"
+        android:layout_below="@+id/bbWrap"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B.L.T."
+        android:onClick="goToDisplayItem"
+        android:id="@+id/blt"
+        android:layout_below="@+id/gCheese"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cheesesteak Hoagie"
+        android:onClick="goToDisplayItem"
+        android:id="@+id/cHoagie"
+        android:layout_below="@+id/blt"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quesadillas"
+        android:onClick="goToDisplayItem"
+        android:id="@+id/quesadillas"
+        android:layout_below="@+id/cHoagie"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shrimp Po'boy"
+        android:onClick="goToDisplayItem"
+        android:id="@+id/sBoy"
+        android:layout_below="@+id/quesadillas"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:onClick="goHome"
+        android:id="@+id/goHome"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true" />
 </RelativeLayout>

@@ -41,11 +41,24 @@ public class MealActivity extends Activity {
     public void goToDisplayItem(View view){
         Button button = (Button) view;
         String itemName = button.getText().toString();
+        String itemDescription = "";
+
+        for (int i = 0; i < ItemDescriptions.mealNames.length; i++) {
+            if (itemName.equals(ItemDescriptions.mealNames[i])) {
+                itemDescription = ItemDescriptions.mealDescriptions[i];
+            }
+        }
 
         Intent intent = new Intent(this, displayItemActivity.class);
         intent.putExtra("item", itemName);
+        intent.putExtra("description", itemDescription);
         startActivity(intent);
         this.finish();
 
+    }
+    public void goHome(View view){
+        Intent intent = new Intent(this, MenuActivity.class);
+        startActivity(intent);
+        this.finish();
     }
 }

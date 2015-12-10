@@ -12,4 +12,13 @@
     <string name="title_activity_mstick">MStickActivity</string>
     <string name="title_activity_popcorn_shrimp">PopcornShrimpActivity</string>
     <string name="title_activity_display_item">displayItemActivity</string>
+    <string name="title_activity_show_order">showOrder</string>
+    <string-array name="side_options">
+        <item>Curly Fries</item>
+        <item>Sweet Potato Fries</item>
+        <item>Fresh Fruit</item>
+    </string-array>
+
+
+
 </resources>

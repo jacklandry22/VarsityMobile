@@ -23,28 +23,32 @@ public class AppetizerActivity extends Activity {
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
 
-        return super.onOptionsItemSelected(item);
-    }
     public void goToDisplayItem(View view){
         Button button = (Button) view;
         String itemName = button.getText().toString();
+        String itemDescription = "";
+
+        for (int i = 0; i < ItemDescriptions.appetizerNames.length; i++) {
+            if (itemName.equals(ItemDescriptions.appetizerNames[i])) {
+                itemDescription = ItemDescriptions.appetizerDescriptions[i];
+            }
+        }
+
+        //Do the same for description
 
         Intent intent = new Intent(this, displayItemActivity.class);
         intent.putExtra("item", itemName);
+        intent.putExtra("description", itemDescription);
+        //Do the same for description
         startActivity(intent);
         this.finish();
 
+    }
+    public void goHome(View view){
+        Intent intent = new Intent(this, MenuActivity.class);
+        startActivity(intent);
+        this.finish();
     }
 }

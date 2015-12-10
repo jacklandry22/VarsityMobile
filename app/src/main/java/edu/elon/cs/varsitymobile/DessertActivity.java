@@ -1,9 +1,12 @@
 package edu.elon.cs.varsitymobile;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class DessertActivity extends Activity {
 
@@ -33,5 +36,30 @@ public class DessertActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void goToDisplayItem(View view){
+        Button button = (Button) view;
+        String itemName = button.getText().toString();
+        String itemDescription = "";
+
+        for (int i = 0; i < ItemDescriptions.dessertNames.length; i++) {
+            if (itemName.equals(ItemDescriptions.dessertNames[i])) {
+                itemDescription = ItemDescriptions.dessertDescriptions[i];
+            }
+        }
+
+        Intent intent = new Intent(this, displayItemActivity.class);
+        intent.putExtra("item", itemName);
+        intent.putExtra("description", itemDescription);
+        startActivity(intent);
+        this.finish();
+
+    }
+
+    public void goHome(View view){
+        Intent intent = new Intent(this, MenuActivity.class);
+        startActivity(intent);
+        this.finish();
     }
 }

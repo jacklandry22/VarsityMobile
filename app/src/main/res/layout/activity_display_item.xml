@@ -4,10 +4,12 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#6e142f"
     tools:context="edu.elon.cs.varsitymobile.displayItemActivity"
    >
 
     <TextView
+        android:text="Example"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -18,13 +20,15 @@
         android:layout_alignParentStart="true" />
 
     <TextView
+        android:text="Example Description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="THIS IS THE DESCRIPTION"
-        android:id="@+id/textView3"
+
+        android:id="@+id/itemDescription"
+        android:layout_below="@+id/itemName"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="83dp" />
+        android:layout_marginTop="26dp" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -32,16 +36,17 @@
         android:layout_height="wrap_content"
         android:text="Add to Order"
         android:id="@+id/addOrder"
+        android:onClick="addToOrder"
         android:layout_above="@+id/placeOrder"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="58dp"
+        android:layout_marginBottom="19dp"
         android:layout_alignParentEnd="true" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HOME"
+        android:text="Home"
         android:onClick="goHome"
         android:id="@+id/goHome"
         android:layout_alignParentBottom="true"
@@ -53,11 +58,52 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Place Order"
+        android:onClick="placeOrder"
         android:id="@+id/placeOrder"
         android:layout_above="@+id/goHome"
-        android:layout_toStartOf="@+id/textView3"
-        android:layout_marginBottom="54dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="18dp"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/options"
+        android:visibility="visible"
+        android:layout_above="@+id/addOrder"
+        android:layout_alignEnd="@+id/itemDescription"
+        android:layout_alignStart="@+id/itemDescription" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Enter Options (Example: American Burger - lettuce, tomato, etc., Chicken Wings - Traditional Buffalo Sauce)"
+        android:id="@+id/optionsTitle"
+        android:layout_above="@+id/options"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Select Side"
+        android:id="@+id/sideSelect"
+        android:visibility="invisible"
+        android:layout_above="@+id/side"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/side"
+        android:entries="@array/side_options"
+        android:visibility="invisible"
+        android:layout_above="@+id/optionsTitle"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="35dp"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
